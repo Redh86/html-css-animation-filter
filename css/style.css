@@ -84,10 +84,11 @@
 .ex-10-icon {
     font-size: 60px;
     animation-name: girop;
-    animation: infinite;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
 }
 @keyframes girop {
-  100% {transform:rotatez(-360deg);}
+  100% {transform:rotatez(1turn);}
 }
 .ex-11-icon {
     font-size: 60px;
@@ -148,24 +149,19 @@
   100% {right: 10%;}
 }
 .ex-13-button:hover .ex-13-top-white {
-  animation-name: tre-top;
-  animation-duration: 3s;
+  animation: tre-top 3s linear;
 }
 @keyframes tre-top {
-  0%   {left: 10%;}
-  25%  {left: 60%;}
-  50%  {right: 10%;}
-  75%  {right: 60%;}
-  100% {left: 10%;}
+  0% {top: -10px, left: 10%,}
+  20% {top: -10px, left: calc(100% - 30px),}
+  40% {top: 60px, left: calc(100% - 30px),}
+  60% {top: 60px, left: -10px}
+  100 {top: -10px, left: -10px}
 }
 .ex-13-button:hover .ex-13-bottom-white {
   animation-name: tre-bottom;
   animation-duration: 3s;
 }
 @keyframes tre-bottom {
-  0%   {right: 10%;}
-  25%  {right: 60%;}
-  50%  {right: 100%;}
-  75%  {bottom: 0; right: 0;}
-  100% {right: 10%;}
+
 }
